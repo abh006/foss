@@ -1,0 +1,19 @@
+#!/bin/bash
+
+
+if ! [ $# -eq 2 ] ; then
+	echo
+	echo "Usage : addnames [classlist] [username]"
+	echo
+elif ! [ -f $1 ] ; then
+	echo "filename '$1' not found"
+
+else
+	count=`cat $1 | grep -u $2 | wc -c`
+	if [ $count == 0 ] ; then 
+		echo -e "`cat $1`\n$2" > $1
+		echo "User added"
+	else
+		echo "user exists"
+	fi
+fi
