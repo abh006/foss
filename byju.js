@@ -20,7 +20,6 @@ function beep(){
 
 
 function tick() { 
-    beep();
     if ( x != null && x != 0 ){
         x[1].click();    
     }
