@@ -30,6 +30,7 @@ function tick() {
         console.log("Question fetched...");
         beep();
     }
+    console.log(x);
     
  }
 
